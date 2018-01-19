@@ -1,4 +1,4 @@
-package com.example.shuozhang.devtf;
+package com.example.shuozhang.devtf.bean;
 
 /**
  * Created by shuozhang on 2018/1/2.

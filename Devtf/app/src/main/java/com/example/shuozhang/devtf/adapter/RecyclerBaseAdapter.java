@@ -1,4 +1,4 @@
-package com.example.shuozhang.devtf;
+package com.example.shuozhang.devtf.adapter;
 
 import android.support.v7.widget.RecyclerView;
 

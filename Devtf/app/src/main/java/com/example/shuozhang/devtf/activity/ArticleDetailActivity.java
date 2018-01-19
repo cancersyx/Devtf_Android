@@ -1,4 +1,4 @@
-package com.example.shuozhang.devtf;
+package com.example.shuozhang.devtf.activity;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -15,6 +15,9 @@ import android.webkit.WebViewClient;
 import android.widget.ProgressBar;
 
 import com.android.volley.VolleyError;
+import com.example.shuozhang.devtf.bean.ArticleDetail;
+import com.example.shuozhang.devtf.db.DatabaseHelper;
+import com.example.shuozhang.devtf.R;
 
 import java.io.BufferedReader;
 import java.io.InputStream;

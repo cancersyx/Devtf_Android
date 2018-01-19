@@ -1,4 +1,4 @@
-package com.example.shuozhang.devtf;
+package com.example.shuozhang.devtf.activity;
 
 import android.content.DialogInterface;
 import android.os.Bundle;
@@ -12,6 +12,13 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+
+import com.example.shuozhang.devtf.adapter.MenuAdapter;
+import com.example.shuozhang.devtf.listener.OnItemClickListener;
+import com.example.shuozhang.devtf.R;
+import com.example.shuozhang.devtf.bean.MenuItem;
+import com.example.shuozhang.devtf.fragment.AboutFragment;
+import com.example.shuozhang.devtf.fragment.ArticleFragment;
 
 import java.util.ArrayList;
 import java.util.List;

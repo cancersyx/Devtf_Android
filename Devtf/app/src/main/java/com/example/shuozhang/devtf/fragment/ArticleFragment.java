@@ -1,4 +1,4 @@
-package com.example.shuozhang.devtf;
+package com.example.shuozhang.devtf.fragment;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -12,6 +12,14 @@ import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.shuozhang.devtf.adapter.ArticleAdapter;
+import com.example.shuozhang.devtf.widget.AutoLoadRecyclerView;
+import com.example.shuozhang.devtf.db.DatabaseHelper;
+import com.example.shuozhang.devtf.listener.OnItemClickListener;
+import com.example.shuozhang.devtf.R;
+import com.example.shuozhang.devtf.activity.ArticleDetailActivity;
+import com.example.shuozhang.devtf.bean.Article;
 
 import org.json.JSONArray;
 import org.json.JSONObject;

@@ -1,4 +1,4 @@
-package com.example.shuozhang.devtf;
+package com.example.shuozhang.devtf.widget;
 
 import android.content.Context;
 import android.support.annotation.Nullable;

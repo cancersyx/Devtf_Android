@@ -1,4 +1,4 @@
-package com.example.shuozhang.devtf;
+package com.example.shuozhang.devtf.adapter;
 
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -6,6 +6,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.example.shuozhang.devtf.R;
+import com.example.shuozhang.devtf.bean.MenuItem;
+import com.example.shuozhang.devtf.listener.OnItemClickListener;
 
 import java.util.ArrayList;
 import java.util.List;
