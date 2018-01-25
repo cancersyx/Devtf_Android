@@ -24,7 +24,7 @@ import java.util.List;
 public class DatabaseHelper extends SQLiteOpenHelper {
     //表1-articles，存储文章的基本信息
     private static final String CREATE_ARTICLE_TABLE_SQL = "CREATE TABLE articles ( "
-            + " postId INTEGER PRIMARY KEY UNIQUE,"
+            + " post_id INTEGER PRIMARY KEY UNIQUE,"
             + " author VARCHAR(30) NOT NULL,"
             + " title VARCHAR(50) NOT NULL,"
             + " category INTEGER,"
@@ -32,7 +32,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             + " )";
     //表2-article_content,存储文章id与文章的内容
     private static final String CREATE_ARTICLE_CONTENT_TABLE_SQL = "CREATE TABLE article_content ( "
-            + " postId INTEGER PRIMARY KEY UNIQUE, "
+            + " post_id INTEGER PRIMARY KEY UNIQUE, "
             + " content TEXT NOT NULL "
             + " )";
     static final String DB_NAME = "tech_frontier.db";
@@ -101,7 +101,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
      */
     private ContentValues article2ContentValues(Article item) {
         ContentValues newValues = new ContentValues();
-        newValues.put("postId", item.postId);
+        newValues.put("post_id", item.post_id);
         newValues.put("author", item.author);
         newValues.put("title", item.title);
         newValues.put("category", item.category);
@@ -126,7 +126,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         List<Article> articles = new ArrayList<>();
         while (cursor.moveToNext()) {
             Article item = new Article();
-            item.postId = cursor.getString(0);
+            item.post_id = cursor.getString(0);
             item.author = cursor.getString(1);
             item.title = cursor.getString(2);
             item.category = cursor.getInt(3);
@@ -154,7 +154,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
      * @return
      */
     public ArticleDetail loadArticleDetail(String postId) {
-        Cursor cursor = mDatabase.rawQuery("select * from " + TABLE_ARTICLE_CONTENT + " where postId = "
+        Cursor cursor = mDatabase.rawQuery("select * from " + TABLE_ARTICLE_CONTENT + " where post_id = "
                 + postId, null);
         ArticleDetail detail = new ArticleDetail(postId, parseArticleContent(cursor));
         cursor.close();
